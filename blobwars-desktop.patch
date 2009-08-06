@@ -1,0 +1,14 @@
+--- blobwars-1.14/icons/blobwars.desktop~	2009-08-06 13:00:33.000000000 +0200
++++ blobwars-1.14/icons/blobwars.desktop	2009-08-06 13:00:33.000000000 +0200
+@@ -1,9 +1,8 @@
+ [Desktop Entry]
+-Encoding=UTF-8
+-Categories=Application;Game;
+-X-Desktop-File-Install-Version=1.0
++Categories=Game;ArcadeGame;
+ Name=Metal Blob Solid
+ Icon=blobwars
+ Exec=blobwars
+ Terminal=false
+ Type=Application
++# vi: encoding=utf-8

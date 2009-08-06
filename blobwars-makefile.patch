@@ -1,0 +1,39 @@
+--- blobwars-1.14/makefile~	2009-08-06 12:54:01.000000000 +0200
++++ blobwars-1.14/makefile	2009-08-06 12:53:51.000000000 +0200
+@@ -8,8 +8,8 @@
+ USEPAK = 1
+ 
+ PREFIX=$(DESTDIR)/usr
+-BINDIR = $(PREFIX)/games/
+-DATADIR = $(PREFIX)/share/games/blobwars/
++BINDIR = $(PREFIX)/bin/
++DATADIR = $(PREFIX)/share/blobwars/
+ DOCDIR = $(PREFIX)/share/doc/$(PROG)/
+ ICONDIR = $(PREFIX)/share/icons/hicolor/
+ DESKTOPDIR = $(PREFIX)/share/applications/
+@@ -74,10 +74,10 @@
+ 
+ # linking the program.
+ $(PROG): $(GAMEOBJS)
+-	$(CXX) $(LIBS) $(GAMEOBJS) -o $(PROG)
++	$(CXX) $(LDFLAGS) $(GAMEOBJS) -o $(PROG) $(LIBS)
+ 	
+ pak: $(PAKOBJS)
+-	$(CXX) $(LIBS) $(PAKOBJS) -o pak
++	$(CXX) $(LDFLAGS) $(PAKOBJS) -o pak $(LIBS)
+ 
+ %.mo: %.po
+ 	msgfmt -c -o $@ $<
+@@ -105,9 +105,9 @@
+ 	mkdir -p $(ICONDIR)64x64/apps
+ 	mkdir -p $(DESKTOPDIR)
+ 
+-	install -o root -g games -m 755 $(PROG) $(BINDIR)$(PROG)
+-	install -o root -g games -m 644 $(PAKNAME) $(DATADIR)$(PAKNAME)
+-	install -o root -g games -m 644 $(DOCS) $(DOCDIR)
++	install $(PROG) $(BINDIR)$(PROG)
++	install $(PAKNAME) $(DATADIR)$(PAKNAME)
++	install $(DOCS) $(DOCDIR)
+ 	cp $(ICONS)$(PROG).png $(ICONDIR)32x32/apps/
+ 	cp $(ICONS)$(PROG)-mini.png $(ICONDIR)16x16/apps/$(PROG).png
+ 	cp $(ICONS)$(PROG)-large.png $(ICONDIR)64x64/apps/$(PROG).png
