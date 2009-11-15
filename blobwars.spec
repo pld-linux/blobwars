@@ -5,9 +5,7 @@ Version:	1.14
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-# download it from http://parallelrealities.co.uk/projects/blobWars.php
-# and put it into the blobwars dir
-Source0:	%{name}-%{version}-1.tar.gz
+Source0:	http://parallelrealities.co.uk/download/blobwars/%{name}-%{version}-1.tar.gz
 # Source0-md5:	c4133a08d49d63b518e70d67b88fb8be
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-desktop.patch
@@ -15,6 +13,7 @@ URL:		http://parallelrealities.co.uk/projects/blobWars.php
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
 BuildRequires:	SDL_ttf-devel
+BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
