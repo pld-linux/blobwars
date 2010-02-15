@@ -1,12 +1,12 @@
 Summary:	2D platform action game
 Summary(pl.UTF-8):	Dwuwymiarowa platformowa gra akcji
 Name:		blobwars
-Version:	1.14
+Version:	1.15
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://parallelrealities.co.uk/download/blobwars/%{name}-%{version}-1.tar.gz
-# Source0-md5:	c4133a08d49d63b518e70d67b88fb8be
+Source0:	http://parallelrealities.co.uk/download/blobwars/%{name}-%{version}-2.tar.gz
+# Source0-md5:	4a1b16df518673de8a4b4730ecb9290d
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://parallelrealities.co.uk/projects/blobWars.php
@@ -28,8 +28,8 @@ optional.
 Jest to pierwszy Epizod Sagi Blob Wars.
 
 Celem gry jest pokonywanie kolejnych poziomów i uratowanie tak wielu
-MIA jak to możliwe. Misje zawierają również inne zadania,
-niektóre opcjonalne.
+MIA jak to możliwe. Misje zawierają również inne zadania, niektóre
+opcjonalne.
 
 %prep
 %setup -q
