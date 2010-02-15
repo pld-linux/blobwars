@@ -12,6 +12,7 @@ Patch1:		%{name}-desktop.patch
 URL:		http://parallelrealities.co.uk/projects/blobWars.php
 BuildRequires:	SDL_image-devel
 BuildRequires:	SDL_mixer-devel
+BuildRequires:	SDL_net-devel
 BuildRequires:	SDL_ttf-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	zlib-devel
