@@ -1,12 +1,12 @@
 Summary:	2D platform action game
 Summary(pl.UTF-8):	Dwuwymiarowa platformowa gra akcji
 Name:		blobwars
-Version:	1.15
+Version:	1.16
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Games
-Source0:	http://parallelrealities.co.uk/download/blobwars/%{name}-%{version}-2.tar.gz
-# Source0-md5:	4a1b16df518673de8a4b4730ecb9290d
+Source0:	http://parallelrealities.co.uk/download/blobwars/%{name}-%{version}-1.tar.gz
+# Source0-md5:	0d2814934b7313098a659047f404b6f6
 Patch0:		%{name}-makefile.patch
 Patch1:		%{name}-desktop.patch
 URL:		http://parallelrealities.co.uk/projects/blobWars.php
@@ -48,6 +48,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/iw
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/no
+rm -r $RPM_BUILD_ROOT%{_datadir}/locale/zh
 
 %find_lang %{name} --all-name
 
